@@ -1,0 +1,415 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    background: url('college2.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 950px;
+    width: 100%;
+    height: 550px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    outline: none;
+    border: none;
+}
+
+
+.left {
+    width: 45%;
+    height: 90%;
+}
+
+.left .imageSlider {
+    width: 100%;
+    height: 100%;
+    background-image: url('seminar.jpg');
+    background-size: 100% 100%;
+    box-shadow: #85219C 0px 8px 24px;
+    animation: changeImage 16s linear infinite;
+}
+
+@keyframes changeImage {
+    25% {
+        background-image: url('seminar.jpg');
+    }
+    50% {
+        background-image: url('book.jpg');
+    }
+    75% {
+        background-image: url('reading.jpg');
+    }
+    100% {
+        background-image: url('readbooks.jpg');
+    }
+}
+
+.loginSection {
+    width: 45%;
+    height: 100%;
+    font-family: 'Poppins', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginSection .logo {
+  height: 80px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: 50%;
+  object-fit: contain;
+}
+
+.loginSection h1 {
+    color: #85219C;
+    font-size: 2.7em;
+    text-shadow: 3px 3px 5px white;
+    text-align: center;
+}
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.loginSection .inputBox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 40px;
+    padding: 0 25px 0 45px;
+    font-size: 1.2em;
+    
+}
+
+.inputBox label {
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+    font-size: 1.2em;
+    top: -14px;
+    left: 18px;
+    font-weight: 600;
+}
+
+.inputBox .icon {
+    position: absolute;
+    top: 11px;
+    left: 15px;
+    font-size: 1.2em;
+}
+
+.inputBox:hover {
+    border: 1px solid black;
+    box-shadow: 08px 10px rgba(0, 0, 0, .5);
+}
+
+.loginSection .btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background-color: #85219C;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Poppins', 'sans-serif';
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 08px 10px rgba(0, 0, 0, .5);
+    animation: none;
+}
+
+.student {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  margin-top: 25px;
+  border-radius: 40px;
+  background-color: #85219C;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: 'Poppins', 'sans-serif';
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.student a {
+text-decoration: none;
+width: 100%;
+text-align: center;
+color: white;
+font-size: 1.2em;
+font-weight: 600;
+}
+
+.student:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 08px 10px rgba(0, 0, 0, .5);
+  animation: none;
+}
+
+.admin {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    border-radius: 40px;
+    background-color: orangered;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'Poppins', 'sans-serif';
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin a {
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.admin:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 08px 10px rgba(0, 0, 0, .5);
+  animation: none;
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 5s ease-in-out 1s infinite both;
+	        animation: heartbeat 5s ease-in-out 1s infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+@media (max-width: 600px) {
+    body {
+        display: block;
+        max-height: 100vh;
+        background: white;
+    }
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100vw;
+        max-height: 100vh;
+    }
+
+    .left {
+        width: 100%;
+        height: 25%;
+        top: 0px;
+    }
+
+    .loginSection {
+        width: 100%;
+        height: 70%;
+        margin-top: 10px;
+        padding: 0 20px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    .loginSection h1 {
+        color: #85219C;
+        text-shadow: 2px 0 black;
+    }
+
+    .scale-in-ver-bottom {
+        -webkit-animation: scale-in-ver-bottom 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: scale-in-ver-bottom 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    @-webkit-keyframes scale-in-ver-bottom {
+        0% {
+          -webkit-transform: scaleY(0);
+                  transform: scaleY(0);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+      }
+      @keyframes scale-in-ver-bottom {
+        0% {
+          -webkit-transform: scaleY(0);
+                  transform: scaleY(0);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 100%;
+                  transform-origin: 0% 100%;
+          opacity: 1;
+        }
+      }
+}
+
+@media (min-width: 600px)
+{
+  .imageSlider {
+    border-radius: 30px;
+  }
+}
